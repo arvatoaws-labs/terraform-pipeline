@@ -16,3 +16,4 @@ ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts && \
 mkdir -p ~/.terraform.d/plugins/arvato-systems.de/arvato/sdms/${SDMS_PROVIDER_VERSION}/linux_amd64/ && \
 wget ${SDMS_PROVIDER_URL} -O ~/.terraform.d/plugins/arvato-systems.de/arvato/sdms/${SDMS_PROVIDER_VERSION}/linux_amd64/terraform-provider-sdms && \
 chmod 755 ~/.terraform.d/plugins/arvato-systems.de/arvato/sdms/${SDMS_PROVIDER_VERSION}/linux_amd64/terraform-provider-sdms
+
