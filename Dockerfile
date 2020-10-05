@@ -2,7 +2,7 @@ FROM mikefarah/yq AS yq
 FROM hashicorp/terraform AS terraform
 FROM fedora
 
-ARG SDMS_PROVIDER_URL=https://asyazureopsprodstrgtf.blob.core.windows.net/provider/terraform-provider-sdms
+ARG SDMS_PROVIDER_URL=https://storage.googleapis.com/terraform-provider-temp/terraform-provider-sdms
 ARG SDMS_PROVIDER_VERSION=0.0.1
 
 COPY --from=yq /usr/bin/yq /usr/bin/
