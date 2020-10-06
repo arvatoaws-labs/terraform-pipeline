@@ -2,13 +2,15 @@ FROM mikefarah/yq AS yq
 FROM hashicorp/terraform AS terraform
 FROM fedora
 
+ADD kubernetes.repo /etc/yum.repos.d/
+
 ARG SDMS_PROVIDER_URL=https://storage.googleapis.com/terraform-provider-temp/terraform-provider-sdms
 ARG SDMS_PROVIDER_VERSION=0.0.1
 
 COPY --from=yq /usr/bin/yq /usr/bin/
 COPY --from=terraform /bin/terraform /usr/bin
 RUN dnf upgrade -y && \
-dnf install -y awscli wget kubernetes-client git sed hub openssh-clients jq zip && \
+dnf install -y awscli wget kubectl git sed hub openssh-clients jq zip && \
 dnf clean all
 RUN rm -rf ~/.ssh/known_hosts && \
 mkdir ~/.ssh && \
