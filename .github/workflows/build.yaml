@@ -31,5 +31,5 @@ jobs:
           push: true
           pull: true
           tags: ghcr.io/arvatoaws-labs/terraform-pipeline:latest
-          # cache-from: type=registry,ref=ghcr.io/arvatoaws-labs/terraform-pipeline:latest
-          # cache-to: type=inline
+          cache-from: type=registry,ref=ghcr.io/arvatoaws-labs/terraform-pipeline:latest
+          cache-to: type=inline
