@@ -1,5 +1,5 @@
 FROM mikefarah/yq AS yq
-FROM hashicorp/terraform:1.0.0 AS terraform
+FROM hashicorp/terraform:1.0.1 AS terraform
 FROM fedora:34
 
 ADD kubernetes.repo /etc/yum.repos.d/
