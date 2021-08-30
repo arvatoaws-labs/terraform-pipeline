@@ -2,6 +2,8 @@ FROM mikefarah/yq AS yq
 FROM hashicorp/terraform:1.0.3 AS terraform
 FROM fedora:34
 
+VOLUME /var/lib/docker
+
 ADD kubernetes.repo /etc/yum.repos.d/
 
 # ARG SDMS_PROVIDER_URL=https://storage.googleapis.com/terraform-provider-temp/terraform-provider-sdms
