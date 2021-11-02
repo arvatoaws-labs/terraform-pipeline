@@ -1,6 +1,6 @@
 FROM mikefarah/yq AS yq
 FROM hashicorp/terraform:1.0.9 AS terraform
-FROM fedora:34
+FROM fedora:35
 
 VOLUME /var/lib/docker
 
