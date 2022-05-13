@@ -1,6 +1,6 @@
-FROM mikefarah/yq AS yq
-FROM hashicorp/terraform:1.1.9 AS terraform
-FROM fedora:35
+FROM ghcr.io/arvatoaws-labs/yq AS yq
+FROM ghcr.io/arvatoaws-labs/terraform:1.1.9 AS terraform
+FROM ghcr.io/arvatoaws-labs/fedora:36
 
 VOLUME /var/lib/docker
 
