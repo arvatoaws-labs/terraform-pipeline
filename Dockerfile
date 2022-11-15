@@ -4,7 +4,9 @@ FROM ghcr.io/arvatoaws-labs/fedora:37
 
 VOLUME /var/lib/docker
 
+ADD det-arch.sh /usr/local/bin
 ADD kubernetes.repo /etc/yum.repos.d/
+RUN sed -i "s/x86_64/`det-arch.sh x c`/" /etc/yum.repos.d/kubernetes.repo
 
 # ARG SDMS_PROVIDER_URL=https://storage.googleapis.com/terraform-provider-temp/terraform-provider-sdms
 # ARG SDMS_PROVIDER_VERSION=0.0.1
