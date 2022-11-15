@@ -1,6 +1,6 @@
 FROM ghcr.io/arvatoaws-labs/yq AS yq
-FROM ghcr.io/arvatoaws-labs/terraform:1.3.2 AS terraform
-FROM ghcr.io/arvatoaws-labs/fedora:36
+FROM ghcr.io/arvatoaws-labs/terraform:1.3.4 AS terraform
+FROM ghcr.io/arvatoaws-labs/fedora:37
 
 VOLUME /var/lib/docker
 
