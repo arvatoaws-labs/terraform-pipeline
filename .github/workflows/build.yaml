@@ -26,7 +26,7 @@ jobs:
           username: jenkins-arvato
           password: ${{ secrets.CR_PAT }}
       - name: Build and Push
-        uses: docker/build-push-action@v3.2.0
+        uses: docker/build-push-action@v3.3.1
         with:
           push: true
           pull: true
