@@ -1,5 +1,5 @@
 FROM ghcr.io/arvatoaws-labs/yq AS yq
-FROM ghcr.io/arvatoaws-labs/terraform:1.5.1 AS terraform
+FROM ghcr.io/arvatoaws-labs/terraform:1.5.2 AS terraform
 FROM ghcr.io/arvatoaws-labs/fedora:38
 
 VOLUME /var/lib/docker
